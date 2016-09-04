@@ -1,4 +1,4 @@
-package manager;
+package context;
 
 public interface ExecutionManager {
     Context execute(Runnable callback, Runnable... tasks);

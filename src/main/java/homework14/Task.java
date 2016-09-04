@@ -1,13 +1,15 @@
-package task;
+package homework14;
+
+import context.TaskExecutingException;
 
 import java.util.concurrent.Callable;
 
 public class Task<T> {
     private final Callable<? extends T> callable;
-    private volatile T result;
+    private T result;
     private volatile boolean isResultReady;
-    private volatile boolean exceptionOccurred;
-    private volatile RuntimeException exception;
+    private boolean exceptionOccurred;
+    private RuntimeException exception;
     private volatile boolean firstThread = true;
     private final Object lockForFirstThreads = new Object();
 
