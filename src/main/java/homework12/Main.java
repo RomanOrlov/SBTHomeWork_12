@@ -4,9 +4,7 @@ import context.Context;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        Runnable callBack = () -> {
-            System.err.println("Callback happened");
-        };
+        Runnable callBack = () -> System.err.println("Callback happened");
         Runnable[] tasks = new Runnable[50];
         for (int i=0;i<tasks.length;i++) {
             final int ii = i;
